@@ -1,0 +1,27 @@
+@using Login_and_Registration.Models
+@model UserDTO
+@{
+    Html.ViewData.TemplateInfo.HtmlFieldPrefix = "Login";
+}
+<div class="userform">
+    <p>Login in</p>
+    <form asp-action="Login_in" asp-controller="Login">
+        <div class="blocks">
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="blocks">
+            <label asp-for="Password">Password:</label>
+            <input asp-for="Password">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="blocks">
+            <button type="submit" class="btn1">Login</button>
+        </div>
+    </form>
+</div>

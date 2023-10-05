@@ -1,0 +1,46 @@
+@using Login_and_Registration.Models
+@model User
+
+<div class="userform">
+    <p>Register</p>
+    <form asp-action="Create" asp-controller="Login">
+        <div class="blocks">
+            <label asp-for="Name">First Name:</label>
+            <input asp-for="Name">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="blocks">
+            <label asp-for="Last_Name">Last Name:</label>
+            <input asp-for="Last_Name">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Last_Name"></span>
+        </div>
+        <div class="blocks">
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="blocks">
+            <label asp-for="Password">Password:</label>
+            <input asp-for="Password">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="blocks">
+            <label asp-for="ConfirmPassword">Pw Confirm:</label>
+            <input asp-for="ConfirmPassword">
+        </div>
+        <div class="blocks">
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div class="blocks">
+            <button type="submit" class="btn1">Register</button>
+        </div>
+    </form>
+</div>
